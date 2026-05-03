@@ -3,7 +3,6 @@ package tudelft.sum;
 import java.util.ArrayList;
 import java.util.Collections;
 
-// Source: https://leetcode.com/problems/add-two-numbers/description/
 class TwoNumbersSum {
 
     public ArrayList<Integer> addTwoNumbers(ArrayList<Integer> first, ArrayList<Integer> second) {
@@ -23,6 +22,10 @@ class TwoNumbersSum {
                 total -= 10;
             }
             result.add(i, total);
+        }
+        // BUG CORREGIDO
+        if (complement == 1) {
+            result.add(complement);
         }
 
         Collections.reverse(result);
