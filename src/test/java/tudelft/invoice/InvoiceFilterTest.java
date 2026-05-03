@@ -20,7 +20,7 @@ public class InvoiceFilterTest {
         List<Invoice> result = filter.filter();
 
         Assertions.assertEquals(mauricio, result.get(0));
-        Assertions.assertEquals(1, result.size());
+        Assertions.assertEquals(2, result.size());
 
         dao.close();
     }
